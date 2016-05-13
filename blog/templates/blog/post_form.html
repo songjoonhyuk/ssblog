@@ -1,0 +1,18 @@
+{% extends 'blog/index.html' %}
+
+
+{% block content %}
+
+<h1>New post</h1>
+
+
+<form action='' method='post' enctype='multipart/form-date' >
+	{% csrf_token %}
+		<table>
+			{{form.as_table}}
+		</table>
+	<input type='submit' />
+</form>
+
+
+{% endblock content %}

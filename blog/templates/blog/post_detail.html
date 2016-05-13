@@ -1,0 +1,22 @@
+{% extends 'blog/index.html' %}
+{% block content %}
+
+<h1>{{ post.title }}</h1>
+<hr>
+	{{ post.content }}
+<hr>
+<img src="{{post.image.url}}">
+
+<hr>
+<ul>
+ 	{% for comment in post.comment_set.all %}
+		<li>{{ comment.content }}</li>
+	{% endfor %}
+</ul>
+
+
+
+<div class="fb-comments" data-href="http://ssblog.azurewebsites.net" data-numposts="5"></div>
+
+
+{% endblock %}
